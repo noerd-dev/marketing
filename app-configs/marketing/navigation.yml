@@ -8,3 +8,6 @@
         - title: Communications
           route: communications
           heroicon: envelope
+        - title: Marketing Settings
+          route: marketing.settings
+          heroicon: cog-6-tooth
