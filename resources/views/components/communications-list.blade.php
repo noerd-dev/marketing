@@ -1,6 +1,7 @@
 <?php
 
 use Livewire\Component;
+use Noerd\Facades\Noerd;
 use Noerd\Marketing\Models\Communication;
 use Noerd\Traits\NoerdList;
 
@@ -15,15 +16,10 @@ new class extends Component {
 
     public function listAction(mixed $modelId = null, array $relations = []): void
     {
-        $this->dispatch(
-            event: 'noerdModal',
-            modalComponent: 'marketing::communication-detail',
-            source: $this->getComponentName(),
-            arguments: ['modelId' => $modelId, 'relations' => $relations],
-        );
+        Noerd::modal('marketing::communication-detail', ['modelId' => $modelId, 'relations' => $relations]);
     }
 
-    public function with()
+    public function with(): array
     {
         $rows = $this->listQuery(Communication::class)->paginate($this->perPage);
 
