@@ -2,7 +2,7 @@
     "name": "noerd/communication",
     "description": "Communication module for noerd platform — central email sending and communications log",
     "type": "library",
-    "version": "v0.4.10",
+    "version": "v0.4.11",
     "license": "proprietary",
     "require": {
         "laravel/framework": "^12.0 || ^13.0",
